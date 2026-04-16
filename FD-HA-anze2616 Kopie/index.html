@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Annika Zehms – Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Lato:wght@300;400;700&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero">
+
+    <!-- Senkrechte Linien im Hintergrund -->
+    <div class="hero-linien" aria-hidden="true">
+      <div class="hero-linie-v"></div>
+      <div class="hero-linie-v"></div>
+      <div class="hero-linie-v"></div>
+      <div class="hero-linie-v"></div>
+      <div class="hero-linie-v"></div>
+      <div class="hero-linie-v"></div>
+    </div>
+
+    <div class="hero-topbar">
+      <span class="hero-libre">LIBRE</span>
+      <a href="kontakt.html" class="hero-kontakt-link">Kontakt</a>
+      <button class="hamburger" id="hamburger" aria-label="Menü öffnen">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="hero-body">
+
+      <div class="hero-mitte">
+
+        <div class="hero-portfolio-block">
+          <p class="hero-portfolio hero-portfolio-1">PORTFOLIO</p>
+          <p class="hero-portfolio hero-portfolio-2">PORTFOLIO</p>
+        </div>
+
+        <div class="hero-untere-reihe">
+          <nav class="hero-nav">
+            <ul>
+              <li><a href="index.html">Startseite</a></li>
+              <li><a href="ueber-mich.html">Über mich</a></li>
+              <li><a href="projekte.html">Projekte</a></li>
+              <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+          </nav>
+          <p class="hero-vorname">ANNI</p>
+        </div>
+
+      </div>
+
+      <div class="hero-seite-rechts">
+        <span class="hero-vertikal-name">ANNI ZEHMS</span>
+        <div class="hero-linie-rechts"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== ÜBER MICH ===================== -->
+  <section class="intro-section">
+    <hr class="trennlinie">
+    <div class="intro-inner">
+      <div class="intro-bilder">
+        <div class="intro-bild-rahmen">
+          <img src="Bilder/Ich.jpeg" alt="Anni Porträt">
+        </div>
+        <div class="intro-bild-sw">
+          <img src="Bilder/urlaub.jpeg" alt="Kreatives Porträt">
+        </div>
+      </div>
+      <div class="intro-text">
+        <h2 class="intro-titel">Hi, Ich bin Anni</h2>
+        <p>
+          – kreativ, neugierig und voller Begeisterung für alles, was mit Kunst, Design und neuen Perspektiven zu tun hat. Hier findest du eine Auswahl meiner Projekte, die meine Leidenschaft für kreative Ausdrucksformen widerspiegeln: von Illustrationen über Fotografie bis hin zu bisherigen Uni Projekten.
+          Jedes Werk erzählt ein Stück meiner persönlichen Reise und zeigt, wie ich bin und wie ich ticke.
+        </p>
+      </div>
+    </div>
+    <hr class="trennlinie">
+  </section>
+
+  <!-- ===================== PROJEKTE ===================== -->
+  <section class="projekte-container">
+    <ul>
+      <li>
+        <a href="projekt-detail2.html" class="projekt-link">
+          <figure class="polaroid">
+            <img src="Bilder/n2.jpeg" alt="Fernweh und Fokus">
+            <figcaption>Fernweh und Fokus</figcaption>
+          </figure>
+        </a>
+      </li>
+      <li>
+        <a href="projekt-detail.html" class="projekt-link">
+          <figure class="polaroid">
+            <img src="Bilder/malen.typ.jpeg" alt="Was mich kreativ macht">
+            <figcaption>Was mich kreativ macht</figcaption>
+          </figure>
+        </a>
+      </li>
+      <li>
+        <a href="projekt-detail3.html" class="projekt-link">
+          <figure class="polaroid">
+            <div class="polaroid-zoom-wrap">
+              <img src="Bilder/u12.png" alt="Uni Projekte">
+            </div>
+            <figcaption>Wodurch ich lerne</figcaption>
+          </figure>
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>Danke fürs vorbei Schauen :)</p>
+    <p>gckirbi@gmail.com</p>
+  </footer>
+
+  <div class="mobile-nav" id="mobile-nav">
+    <button class="mobile-nav-schliessen" id="mobile-nav-schliessen">&times;</button>
+    <a href="index.html">Startseite</a>
+    <a href="ueber-mich.html">Über mich</a>
+    <a href="projekte.html">Projekte</a>
+    <a href="kontakt.html">Kontakt</a>
+  </div>
+  <script>
+    (function(){
+      var hamburger = document.getElementById('hamburger');
+      var mobileNav = document.getElementById('mobile-nav');
+      var schliessen = document.getElementById('mobile-nav-schliessen');
+      function toggle() {
+        hamburger.classList.toggle('offen');
+        mobileNav.classList.toggle('offen');
+        document.body.style.overflow = mobileNav.classList.contains('offen') ? 'hidden' : '';
+      }
+      hamburger.addEventListener('click', toggle);
+      schliessen.addEventListener('click', toggle);
+    })();
+  </script>
+</body>
+</html>
