@@ -1,314 +1,619 @@
+
+
 /* =======================
    Farbvariablen & Root
    ======================= */
-:root {
-  --creme: #f5f3e7;
-  --blau-grau: #78878E;
-  --blau: #4666a3;
-  --sand: #A1563B;
-  --text: #232323;
-  --akzent: #f7e7ce;
-  --border-radius: 1.5em;
-  --shadow: 0 2px 16px rgba(70,102,163,0.08);
-  --dunkeltuerkis: #364045;
-}
+   :root {
+    --creme: #f5f3e7;
+    --blau-grau: #78878E;
+    --blau: #4666a3;
+    --sand: #A1563B;
+    --text: #232323;
+    --akzent: #f7e7ce;
+    --border-radius: 1.5em;
+    --shadow: 0 2px 16px rgba(70,102,163,0.08);
+    --dunkeltuerkis: #364045; 
+  }
+  
+  /* =======================
+     Grundlayout & Body
+     ======================= */
+  body {
+    background: var(--creme);
+    color: var(--text);
+    font-family: 'Georgia', serif;
+    margin: 0;
+    min-height: 100vh;
+  }
+  
+  /* =======================
+     Header & Navigation
+     ======================= */
+  header {
+    background: var(--blau-grau);
+    padding: 2em 0 1em 0;
+    text-align: center;
+  }
 
-/* =======================
-   Grundlayout & Body
-   ======================= */
-body {
-  background: var(--creme);
-  color: var(--text);
-  font-family: 'Georgia', serif;
-  margin: 0;
-  min-height: 100vh;
-}
 
-/* =======================
-   Navigation
+  .header-image {
+    width: 100%;
+    max-width: 1000px;  
+    height: auto;
+    display: block;
+    object-fit: cover;   
+    margin: 0 auto;      
+  }
+  
+  header h1 {
+    font-size: 3em;
+    color: var(--blau);
+    letter-spacing: 0.05em;
+    margin: 0.7em 0 0.2em 0;
+  }
+  
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2em 0;
+    display: flex;
+    justify-content: right;
+    gap: 1.2em;
+    flex-wrap: wrap;
+  }
+  
+  nav a {
+    color: var(--sand);
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    padding: 0.2em 0.5em;
+    border-radius: 0.7em;
+    transition: background 0.2s, color 0.2s, border-bottom 0.2s;
+  }
+  
+  nav a:hover {
+    background: var(--sand);
+    color: var(--creme);
+    border-bottom: 2px solid var(--blau);
+  }
+  
+  /* =======================
+     Main Content
+     ======================= */
+  main {
+    max-width: 1400px;
+    margin: 2.5em auto 0 auto;
+    background: var(--creme);
+    padding: 1.5em;
+  }
+  
+  .centered-main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2.5em 1.5em;
+  }
+  
+  section {
+    margin-bottom: 2.5em;
+    border-top: 1px solid var(--sand); 
+    padding-top: 2rem;
+  }
+  
+  h1, h2, h3, h4 {
+    color: var(--sand);
+    letter-spacing: 0.03em;
+    font-family: 'Cinzel', 'Georgia', serif;
+    font-weight: 400;
+  }
+  
+  h2 {
+    font-size: 2em;
+    margin: 1.5em 0 1.5em 2em;
+  }
+  
+  h3 {
+    font-size: 1.3em;
+    margin-bottom: 0.7em;
+  }
+  
+  /* =======================
+     Listen & Listen-Layouts
+     ======================= */
+  ul, .hobbies-list, .coding-list {
+    margin: 0.7em 0 1.5em 1.5em;
+    padding: 0;
+    list-style: disc inside;
+  }
+  
+  li {
+    margin-bottom: 0.5em;
+  }
+  
+  /* =======================
+     Skills & Hobbies
+     ======================= */
+  .skills-logos, .hobbies-gallery {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 18px;
+  }
+  
+  .skill-logo, .hobby-icon {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;       
+    border-radius: 50%;              
+    transition: transform 0.2s;
+    background: var(--creme);
+    box-shadow: 0 1px 6px rgba(70,102,163,0.10);
+  }
+  
+  .skill-logo:hover, .hobby-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 16px rgba(70,102,163,0.18);
+  }
+  
+  .logo-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .tooltip-text {
+    visibility: hidden;
+    opacity: 0;
+    background-color: var(--sand);
+    color: white;
+    padding: 6px 10px;
+    border-radius: 0.5em;
+    position: absolute;
+    bottom: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    transition: opacity 0.2s ease-in-out;
+    z-index: 10;
+    font-size: 0.85em;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .logo-wrapper:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  /* =======================
+     Bildergalerie Horizontal
+     ======================= */
+  .bildergalerie-horizontal {
+    padding: 2rem;
+    background-color: var(--creme);
+  }
+  
+  .bildergalerie-horizontal h2 {
+    text-align: center;
+  }
+  
+  .scroller {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    scrollbar-width: thin;
+    scrollbar-color: #999 transparent;
+  }
+  
+  .scroller img {
+    flex: 0 0 auto;
+    width: 300px;
+    object-fit: cover;
+    scroll-snap-align: start;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .scroller img:hover {
+    transform: scale(1.05);
+  }
+
+  /* =======================
+   Uni-Projekte abwechselnd
    ======================= */
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 2em 0;
+.uni-projekt {
   display: flex;
-  justify-content: right;
-  gap: 1.2em;
+  align-items: center;
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+  border-top: 1px solid var(--sand);
+  padding-top: 2rem;
   flex-wrap: wrap;
 }
 
-nav a {
-  color: var(--sand);
-  text-decoration: none;
-  border-bottom: 2px solid transparent;
-  padding: 0.2em 0.5em;
-  border-radius: 0.7em;
-  transition: background 0.2s, color 0.2s, border-bottom 0.2s;
+.uni-projekt.reverse {
+  flex-direction: row-reverse;
 }
 
-nav a:hover {
-  background: var(--sand);
-  color: var(--creme);
-  border-bottom: 2px solid var(--blau);
-}
-
-/* =======================
-   Main Content
-   ======================= */
-main {
-  max-width: 1400px;
-  margin: 2.5em auto 0 auto;
-  background: var(--creme);
-  padding: 1.5em;
-}
-
-.centered-main {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2.5em 1.5em;
-}
-
-section {
-  margin-bottom: 2.5em;
-  border-top: 1px solid var(--sand);
-  padding-top: 2rem;
-}
-
-h1, h2, h3, h4 {
-  color: var(--sand);
-  letter-spacing: 0.03em;
-  font-family: 'Cinzel', 'Georgia', serif;
-  font-weight: 400;
-}
-
-h2 {
-  font-size: 2em;
-  margin: 1.5em 0 1.5em 2em;
-}
-
-h3 {
-  font-size: 1.3em;
-  margin-bottom: 0.7em;
-}
-
-/* =======================
-   Listen
-   ======================= */
-ul, .coding-list {
-  margin: 0.7em 0 1.5em 1.5em;
-  padding: 0;
-  list-style: disc inside;
-}
-
-li {
-  margin-bottom: 0.5em;
-}
-
-/* =======================
-   Skills & Hobbies
-   ======================= */
-.skills-logos, .hobbies-gallery {
-  display: flex;
-  gap: 18px;
-  align-items: center;
-  justify-content: flex-start;
-  margin-bottom: 18px;
-}
-
-.skill-logo, .hobby-icon {
-  width: 140px;
-  height: 140px;
+.uni-projekt img {
+  width: 300px;
+  height: 220px;
   object-fit: cover;
-  border-radius: 50%;
-  transition: transform 0.2s;
-  background: var(--creme);
-  box-shadow: 0 1px 6px rgba(70,102,163,0.10);
-}
-
-.skill-logo:hover, .hobby-icon:hover {
-  transform: scale(1.1);
-  box-shadow: 0 4px 16px rgba(70,102,163,0.18);
-}
-
-.logo-wrapper {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.tooltip-text {
-  visibility: hidden;
-  opacity: 0;
-  background-color: var(--sand);
-  color: white;
-  padding: 6px 10px;
   border-radius: 0.5em;
-  position: absolute;
-  bottom: 110%;
-  left: 50%;
-  transform: translateX(-50%);
-  white-space: nowrap;
-  transition: opacity 0.2s ease-in-out;
-  z-index: 10;
-  font-size: 0.85em;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  flex-shrink: 0;
 }
 
-.logo-wrapper:hover .tooltip-text {
-  visibility: visible;
+.uni-projekt-text h3 {
+  color: var(--blau);
+  font-size: 1.3em;
+  margin: 0 0 0.5em 0;
+}
+
+.uni-projekt-text p {
+  font-size: 0.95em;
+  line-height: 1.6;
+  color: var(--text);
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  .uni-projekt,
+  .uni-projekt.reverse {
+    flex-direction: column;
+  }
+  .uni-projekt img {
+    width: 100%;
+    height: auto;
+  }
+}
+  
+  /* =======================
+     Blog-Sektion
+     ======================= */
+  .blog-section {
+    margin: 2em 0 40px 50px;
+  }
+  
+  .blog-section img {
+    max-width: 200px;
+    margin-right: 15px;
+    height: auto;
+  }
+  
+  .blog-section p {
+    width: calc(100% - 220px);
+    display: inline-block;
+  }
+  
+  /* =======================
+     Bild-Text-Sektion
+     ======================= */
+  .bild-text-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 3em auto;
+    flex-wrap: wrap; 
+  }
+  
+  .bild-text-section img {
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+  
+  .text-bereich {
+    max-width: 500px;
+  }
+  
+  .text-bereich h2 {
+    margin-top: 0;
+    font-size: 1.8em;
+    color: var(--blau);
+  }
+  
+  .text-bereich p {
+    font-size: 1em;
+    margin-left: 40px;
+    line-height: 1.6;
+    color: var(--text);
+  }
+  
+  /* =======================
+     Projekte-Container & Polaroids
+     ======================= */
+  .projekte-container {
+    background: var(--dunkeltuerkis);
+    margin: 2em auto 3em auto;
+    max-width: 2000px;
+    box-shadow: 0 2px 24px rgba(70,102,163,0.10);
+    padding: 1em;
+  }
+  
+  .projekte-container ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .projekte-container li {
+    max-width: 250px;
+    text-align: center;
+    box-shadow: 0 1px 8px rgba(70,102,163,0.10);
+    padding: 1.2em 0;
+    transition: transform 0.18s, box-shadow 0.18s;
+  }
+  
+  .projekte-container li:hover {
+    transform: translateY(-6px) scale(1.04);
+    box-shadow: 0 6px 24px rgba(70,102,163,0.13);
+  }
+  
+  .projekte-container img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    transition: transform 0.3s;
+    margin-bottom: 1em;
+  }
+  
+  .projekte-container img:hover {
+    transform: scale(1.05);
+  }
+  
+  .projekt-title {
+    display: none;
+    position: absolute;
+    left: 50%;
+    bottom: 18px;
+    transform: translateX(-50%);
+    background: var(--blau-grau); 
+    color: #fff;
+    padding: 0.6em 1.2em;
+    border-radius: 1em;
+    font-size: 1.08em;
+    font-weight: 600;
+    pointer-events: none;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.14);
+    white-space: nowrap;
+    z-index: 2;
+  }
+  
+  .projekt-link {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+  }
+  
+  .projekt-link:hover .projekt-title {
+    display: block;
+  }
+  
+  .polaroid {
+    background: #fdf6e8;
+    padding: 0.9em 0.9em 2.8em 0.9em;
+    box-shadow:
+      2px 3px 6px rgba(0,0,0,0.12),
+      6px 10px 28px rgba(0,0,0,0.13);
+    margin: 1em 0.5em;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s cubic-bezier(.22,.68,0,1.2), box-shadow 0.3s;
+  }
+
+  /* Leicht vergilbter Rand-Effekt */
+  .polaroid::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255,240,200,0.18) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  .polaroid img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    filter: sepia(18%) saturate(0.88) brightness(0.97) contrast(1.06);
+  }
+
+  .polaroid-zoom-wrap {
+    width: 220px;
+    height: 220px;
+    overflow: hidden;
+    display: block;
+  }
+
+  .polaroid-zoom-wrap img {
+    width: 100%;
+    height: 100%;
+    transform: scale(1.35);
+    transform-origin: center center;
+  }
+
+  .polaroid figcaption {
+    color: #7a5c3a;
+    font-size: 1.15em;
+    font-family: 'Caveat', cursive;
+    margin-top: 1em;
+    letter-spacing: 0.04em;
+  }
+
+  /* Jedes Polaroid leicht anders gedreht */
+  .projekte-container li:nth-child(1) .polaroid { transform: rotate(-3deg); }
+  .projekte-container li:nth-child(2) .polaroid { transform: rotate(1.8deg); }
+  .projekte-container li:nth-child(3) .polaroid { transform: rotate(-1.2deg); }
+
+  .projekt-link:hover .polaroid {
+    transform: scale(1.06) rotate(-4deg) !important;
+    box-shadow:
+      4px 6px 12px rgba(0,0,0,0.16),
+      10px 18px 40px rgba(0,0,0,0.18);
+  }
+
+  .polaroid-rotated-left .polaroid {
+    transform: rotate(-6deg);
+    transition: transform 0.22s;
+  }
+  .polaroid-rotated-right .polaroid {
+    transform: rotate(6deg);
+    transition: transform 0.22s;
+  }
+  
+  
+  /* =======================
+     Footer
+     ======================= */
+  footer {
+    margin-top: 4em;
+    text-align: center;
+    color: var(--sand);
+    font-size: 0.95em;
+    padding-bottom: 1.5em;
+  }
+  
+  /* =======================
+     Responsive Styles
+     ======================= */
+  @media (max-width: 900px) {
+    main {
+      padding: 1.2em 0.6em;
+    }
+    .skills-section, .skills-logos, .hobbies-gallery {
+      flex-direction: column;
+      gap: 1em;
+      justify-content: center;
+      align-items: center;
+    }
+    .projekte-container ul {
+      flex-direction: column;
+    }
+    .projekte-container img {
+      height: 180px;
+      max-width: 90vw;
+    }
+    .polaroid img {
+      width: 90vw;
+      max-width: 320px;
+    }
+  }
+  /* =======================
+   Uni-Projekte Animationen
+   ======================= */
+
+/* Scroll-Einblenden */
+.uni-projekt {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.uni-projekt.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Bild und Text versetzt reingleiten */
+.uni-projekt img {
+  transition: transform 0.4s ease, box-shadow 0.4s ease, opacity 0.7s ease 0.15s;
+  opacity: 0;
+}
+
+.uni-projekt .uni-projekt-text {
+  opacity: 0;
+  transition: opacity 0.7s ease 0.3s;
+}
+
+.uni-projekt.visible img,
+.uni-projekt.visible .uni-projekt-text {
   opacity: 1;
 }
 
-/* =======================
-   Projekte-Container & Polaroids
-   ======================= */
-.projekte-container {
-  background: var(--dunkeltuerkis);
-  margin: 2em auto 3em auto;
-  max-width: 2000px;
-  box-shadow: 0 2px 24px rgba(70,102,163,0.10);
-  padding: 1em;
+/* Bild Hover: Zoom + Sand-Overlay */
+.uni-projekt-img-wrap {
+  position: relative;
+  width: 300px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 0.5em;
 }
 
-.projekte-container ul {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2em;
-  margin: 0;
-  padding: 0;
-}
-
-.projekte-container li {
-  max-width: 250px;
-  text-align: center;
-  box-shadow: 0 1px 8px rgba(70,102,163,0.10);
-  padding: 1.2em 0;
-  transition: transform 0.18s, box-shadow 0.18s;
-}
-
-.projekte-container li:hover {
-  transform: translateY(-6px) scale(1.04);
-  box-shadow: 0 6px 24px rgba(70,102,163,0.13);
-}
-
-.projekte-container img {
+.uni-projekt-img-wrap img {
   width: 100%;
-  height: 400px;
+  height: 220px;
   object-fit: cover;
-  transition: transform 0.3s;
-  margin-bottom: 1em;
+  display: block;
+  transition: transform 0.4s ease;
 }
 
-.projekte-container img:hover {
-  transform: scale(1.05);
-}
-
-.projekt-link {
-  position: relative;
-  display: inline-block;
-  text-decoration: none;
-}
-
-.polaroid {
-  background: #fdf6e8;
-  padding: 0.9em 0.9em 2.8em 0.9em;
-  box-shadow:
-    2px 3px 6px rgba(0,0,0,0.12),
-    6px 10px 28px rgba(0,0,0,0.13);
-  margin: 1em 0.5em;
-  text-align: center;
-  position: relative;
-  transition: transform 0.3s cubic-bezier(.22,.68,0,1.2), box-shadow 0.3s;
-}
-
-.polaroid::after {
+.uni-projekt-img-wrap::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(255,240,200,0.18) 0%, transparent 60%);
-  pointer-events: none;
+  background: var(--sand);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  border-radius: 0.5em;
 }
 
-.polaroid img {
-  width: 220px;
-  height: 220px;
-  object-fit: cover;
-  display: block;
-  filter: sepia(18%) saturate(0.88) brightness(0.97) contrast(1.06);
+.uni-projekt-img-wrap:hover img {
+  transform: scale(1.07);
 }
 
-.polaroid-zoom-wrap {
-  width: 220px;
-  height: 220px;
-  overflow: hidden;
-  display: block;
+.uni-projekt-img-wrap:hover::after {
+  opacity: 0.18;
 }
 
-.polaroid-zoom-wrap img {
+/* Trennlinie animiert sich auf */
+.uni-projekt {
+  border-top: none;
+  padding-top: 2rem;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.uni-projekt::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1px;
+  width: 0%;
+  background: var(--sand);
+  transition: width 0.8s ease 0.1s;
+}
+
+.uni-projekt.visible::before {
   width: 100%;
-  height: 100%;
-  transform: scale(1.35);
-  transform-origin: center center;
 }
 
-.polaroid figcaption {
-  color: #7a5c3a;
-  font-size: 1.15em;
-  font-family: 'Caveat', cursive;
-  margin-top: 1em;
-  letter-spacing: 0.04em;
-}
-
-.projekte-container li:nth-child(1) .polaroid { transform: rotate(-3deg); }
-.projekte-container li:nth-child(2) .polaroid { transform: rotate(1.8deg); }
-.projekte-container li:nth-child(3) .polaroid { transform: rotate(-1.2deg); }
-
-.projekt-link:hover .polaroid {
-  transform: scale(1.06) rotate(-4deg) !important;
-  box-shadow:
-    4px 6px 12px rgba(0,0,0,0.16),
-    10px 18px 40px rgba(0,0,0,0.18);
-}
-
-/* =======================
-   Footer
-   ======================= */
-footer {
-  margin-top: 4em;
-  text-align: center;
-  color: var(--sand);
-  font-size: 0.95em;
-  padding-bottom: 1.5em;
-}
-
-/* =======================
-   Responsive (900px)
-   ======================= */
-@media (max-width: 900px) {
-  main {
-    padding: 1.2em 0.6em;
-  }
-  .skills-logos, .hobbies-gallery {
-    flex-direction: column;
-    gap: 1em;
-    justify-content: center;
-    align-items: center;
-  }
-  .projekte-container ul {
+/* Responsive */
+@media (max-width: 700px) {
+  .uni-projekt,
+  .uni-projekt.reverse {
     flex-direction: column;
   }
-  .projekte-container img {
-    height: 180px;
-    max-width: 90vw;
+  .uni-projekt-img-wrap {
+    width: 100%;
   }
-  .polaroid img {
-    width: 90vw;
-    max-width: 320px;
+  .uni-projekt-img-wrap img {
+    height: auto;
   }
+
+
 }
+
 
 /* =======================
    Pinterest Grid & Lightbox
@@ -387,6 +692,36 @@ footer {
   letter-spacing: 0.04em;
   font-family: 'Cinzel', 'Georgia', serif;
   font-weight: 400;
+}
+
+/* Dunkler Füllblock */
+.farb-block {
+  min-height: 200px;
+  background: var(--dunkeltuerkis);
+}
+
+/* Goldener antiker Rahmen */
+.rahmen-antik {
+  border: 3px solid #c8a84b !important;
+  border-radius: 0 !important;
+  box-shadow: inset 0 0 0 2px rgba(200,168,75,0.35),
+              0 0 0 2px #7a5c1e,
+              6px 10px 28px rgba(0,0,0,0.3);
+}
+.rahmen-antik::after {
+  content: '';
+  position: absolute;
+  inset: 7px;
+  border: 1px solid rgba(200,168,75,0.45);
+  pointer-events: none;
+  z-index: 2;
+  border-radius: 0;
+}
+
+/* Spitze Umrandung (abgeschnittene Ecken) */
+.rahmen-spitz {
+  border-radius: 0 !important;
+  clip-path: polygon(18px 0%, calc(100% - 18px) 0%, 100% 18px, 100% calc(100% - 18px), calc(100% - 18px) 100%, 18px 100%, 0% calc(100% - 18px), 0% 18px);
 }
 
 .lightbox {
@@ -488,6 +823,105 @@ footer {
 }
 
 /* =======================
+   Hamburger & Mobile Nav
+   ======================= */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 4px;
+  z-index: 100;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: rgba(255,255,255,0.8);
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+.hamburger.offen span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.offen span:nth-child(2) { opacity: 0; }
+.hamburger.offen span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+.mobile-nav {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(54,64,69,0.97);
+  z-index: 200;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.mobile-nav.offen { display: flex; }
+
+.mobile-nav a {
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  font-family: 'Cinzel', 'Georgia', serif;
+  font-size: 1.8em;
+  letter-spacing: 0.08em;
+  transition: color 0.2s;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.mobile-nav a:hover { color: #fff; background: none; }
+
+.mobile-nav-schliessen {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.75);
+  font-size: 2.2rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+  transition: color 0.2s;
+}
+.mobile-nav-schliessen:hover { color: #fff; }
+
+@media (max-width: 750px) {
+  /* Show hamburger button */
+  .hamburger { display: flex; }
+
+  /* Fix h2 left margin overflow */
+  h2 { margin-left: 0.5em; }
+
+  /* Prevent hero-portfolio-2 from overflowing left */
+  .hero-portfolio-2 { left: 0; }
+
+  /* Smaller skill/hobby icons */
+  .skill-logo, .hobby-icon { width: 80px; height: 80px; }
+
+  /* Fix polaroid zoom wrap on mobile */
+  .polaroid-zoom-wrap { width: 100%; height: 0; padding-bottom: 100%; position: relative; }
+  .polaroid-zoom-wrap img { position: absolute; inset: 0; width: 100%; height: 100%; transform: scale(1); }
+
+  /* Fix blog section layout */
+  .blog-section { margin: 1em 0 20px 0; }
+  .blog-section img { max-width: 100%; display: block; margin: 0 0 10px 0; float: none; }
+  .blog-section p { width: 100%; display: block; margin: 0; }
+
+  /* Fix text-bereich padding */
+  .text-bereich p { margin-left: 0; }
+
+  /* Ensure main content doesn't overflow */
+  main { overflow-x: hidden; }
+}
+
+/* =======================
    Globale Section-Overrides für Index
    ======================= */
 .hero,
@@ -497,6 +931,7 @@ footer {
   margin-bottom: 0;
 }
 
+/* h2 override für intro */
 .intro-titel {
   margin: 0 0 0.9rem 0 !important;
 }
@@ -521,6 +956,7 @@ footer {
   display: flex;
 }
 
+/* Senkrechte Hintergrundlinien */
 .hero-linien {
   position: absolute;
   inset: 0;
@@ -537,6 +973,7 @@ footer {
   border-right: none;
 }
 
+/* Alles im Hero über den Linien */
 .hero-topbar,
 .hero-body {
   position: relative;
@@ -572,6 +1009,7 @@ footer {
   gap: 1.5rem;
 }
 
+/* Mittelteil mit PORTFOLIO-Texten + unterer Reihe */
 .hero-mitte {
   flex: 1;
   display: flex;
@@ -580,11 +1018,13 @@ footer {
   padding: 8vh 0 4vh 0;
 }
 
+/* PORTFOLIO-Block oben */
 .hero-portfolio-block {
   display: flex;
   flex-direction: column;
 }
 
+/* Untere Reihe: Nav links, ANNI rechts */
 .hero-untere-reihe {
   display: flex;
   flex-direction: row;
@@ -592,6 +1032,7 @@ footer {
   gap: 2rem;
 }
 
+/* Hero-Nav überschreibt globale nav-Stile */
 .hero-nav {
   margin-top: 0;
   margin-left: 2cm;
@@ -634,6 +1075,7 @@ footer {
 }
 
 .hero-portfolio-2 {
+  /* Outline-Effekt, nach links versetzt */
   position: relative;
   left: -1.8rem;
   margin-top: -0.05em;
@@ -651,6 +1093,7 @@ footer {
   flex-shrink: 0;
 }
 
+/* Rechte Seite: vertikaler Name + Linie */
 .hero-seite-rechts {
   display: flex;
   flex-direction: row;
@@ -751,97 +1194,72 @@ footer {
 }
 
 /* =======================
+   FOTOS SECTION
+   ======================= */
+.fotos-section {
+  background: var(--dunkeltuerkis);
+  padding: 2rem 2rem 0 2rem;
+  overflow: hidden;
+}
+
+.fotos-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.5fr;
+  gap: 0.7rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.fotos-grid img {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.72) saturate(0.75);
+  transition: filter 0.4s;
+}
+
+.fotos-grid img:hover {
+  filter: brightness(0.9) saturate(1);
+}
+
+.fotos-titel {
+  font-family: 'Cinzel', 'Georgia', serif;
+  font-size: clamp(3rem, 7vw, 6rem);
+  color: #fff;
+  margin: 0;
+  padding: 0.15em 0 0.6em 0;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+/* =======================
    HERO RESPONSIVE
    ======================= */
 @media (max-width: 750px) {
-  .hero-body { flex-wrap: wrap; padding: 1rem; }
+  .hero-body {
+    flex-wrap: wrap;
+    padding: 1rem;
+  }
   .hero-nav { display: none; }
   .hero-mitte { padding: 4vh 0 3vh 0; }
   .hero-untere-reihe { flex-direction: column; align-items: flex-start; }
   .hero-vorname { margin-left: 0; }
   .hero-seite-rechts { display: none; }
+
   .intro-section { padding: 0 1.2rem; }
   .intro-inner { flex-direction: column; gap: 1.5rem; }
   .intro-bild-rahmen img { width: 130px; height: 170px; }
   .intro-bild-sw img { width: 170px; height: 215px; }
-}
 
-/* =======================
-   Hamburger & Mobile Nav
-   ======================= */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-  background: none;
-  border: none;
-  padding: 4px;
-  z-index: 100;
-}
-
-.hamburger span {
-  display: block;
-  width: 24px;
-  height: 2px;
-  background: rgba(255,255,255,0.8);
-  border-radius: 2px;
-  transition: all 0.3s;
-}
-
-.hamburger.offen span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.hamburger.offen span:nth-child(2) { opacity: 0; }
-.hamburger.offen span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-.mobile-nav {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(54,64,69,0.97);
-  z-index: 200;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-}
-
-.mobile-nav.offen { display: flex; }
-
-.mobile-nav a {
-  color: rgba(255,255,255,0.85);
-  text-decoration: none;
-  font-family: 'Cinzel', 'Georgia', serif;
-  font-size: 1.8em;
-  letter-spacing: 0.08em;
-  transition: color 0.2s;
-  background: none;
-  border: none;
-  padding: 0;
-}
-
-.mobile-nav a:hover { color: #fff; background: none; }
-
-.mobile-nav-schliessen {
-  position: absolute;
-  top: 1.2rem;
-  right: 1.5rem;
-  background: none;
-  border: none;
-  color: rgba(255,255,255,0.75);
-  font-size: 2.2rem;
-  cursor: pointer;
-  line-height: 1;
-  padding: 0;
-  transition: color 0.2s;
-}
-.mobile-nav-schliessen:hover { color: #fff; }
-
-@media (max-width: 750px) {
-  .hamburger { display: flex; }
-  h2 { margin-left: 0.5em; }
-  .hero-portfolio-2 { left: 0; }
-  .skill-logo, .hobby-icon { width: 80px; height: 80px; }
-  .polaroid-zoom-wrap { width: 100%; height: 0; padding-bottom: 100%; position: relative; }
-  .polaroid-zoom-wrap img { position: absolute; inset: 0; width: 100%; height: 100%; transform: scale(1); }
-  main { overflow-x: hidden; }
+  .fotos-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .fotos-grid img:last-child {
+    grid-column: span 2;
+  }
 }
