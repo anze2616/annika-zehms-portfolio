@@ -1,1 +1,0 @@
-# annika-zehms-portfolio
