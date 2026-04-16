@@ -1,0 +1,273 @@
+
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Lato:wght@300;400;700&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fernweh und Fokus</title>
+  <style>
+    .projekt-karte .overlay h3,
+    .projekt-karte .overlay p { display: none; }
+    .lb-text { display: none; }
+    .lb-inhalt img { max-width: 80vw; }
+    .projekt-karte:hover img { filter: grayscale(0%) brightness(1); }
+  </style>
+</head>
+<body>
+
+  <section class="hero hero--kompakt">
+    <div class="hero-linien" aria-hidden="true">
+      <div class="hero-linie-v"></div>
+      <div class="hero-linie-v"></div>
+      <div class="hero-linie-v"></div>
+      <div class="hero-linie-v"></div>
+      <div class="hero-linie-v"></div>
+      <div class="hero-linie-v"></div>
+    </div>
+    <div class="hero-topbar">
+      <span class="hero-libre">LIBRE</span>
+      <a href="kontakt.html" class="hero-kontakt-link">Kontakt</a>
+      <button class="hamburger" id="hamburger" aria-label="Menü öffnen">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="hero-body">
+      <div class="hero-mitte">
+        <div class="hero-portfolio-block">
+          <p class="hero-portfolio hero-portfolio-1">PORTFOLIO</p>
+          <p class="hero-portfolio hero-portfolio-2">PORTFOLIO</p>
+        </div>
+        <div class="hero-untere-reihe">
+          <nav class="hero-nav">
+            <ul>
+              <li><a href="index.html">Startseite</a></li>
+              <li><a href="ueber-mich.html">Über mich</a></li>
+              <li><a href="projekte.html">Projekte</a></li>
+              <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+          </nav>
+          <p class="hero-vorname">ANNI</p>
+        </div>
+      </div>
+      <div class="hero-seite-rechts">
+        <span class="hero-vertikal-name">ANNI ZEHMS</span>
+        <div class="hero-linie-rechts"></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-schliessen" id="lb-schliessen">&times;</button>
+    <div class="lb-inhalt" id="lb-inhalt">
+      <div class="lb-bild-wrapper">
+        <button class="lb-pfeil lb-pfeil-links" id="lb-zurueck">&#8249;</button>
+        <img src="" id="lb-bild" alt="">
+        <button class="lb-pfeil lb-pfeil-rechts" id="lb-weiter">&#8250;</button>
+      </div>
+      <div class="lb-text">
+        <h3 id="lb-titel"></h3>
+        <p id="lb-beschreibung"></p>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <div class="pinterest-grid">
+
+      <div class="projekt-karte">
+        <img src="Bilder/n2.jpeg" alt="Blumen">
+        <div class="overlay"><h3>In voller Blüte</h3><p>Meine Liebe zur Fotografie entdeckte ich durch das Festhalten schöner Erlebnisse und Reisen in ästhetischen Bildern.</p></div>
+      </div>
+
+      <div class="projekt-karte">
+        <img src="Bilder/i1.jpeg" alt="Reise">
+        <div class="overlay"><h3>Unterwegs</h3><p>Reisen bedeutet für mich, das Besondere im Gewöhnlichen zu sehen und Momente festzuhalten, die sonst unbemerkt bleiben.</p></div>
+      </div>
+
+      <div class="projekt-karte">
+        <img src="Bilder/n1.JPG" alt="Natur">
+        <div class="overlay"><h3>Naturmoment</h3><p>Ein Schnappschuss, der eine Stimmung einfängt – ruhig, lebendig und voller Tiefe.</p></div>
+      </div>
+
+      <div class="projekt-karte">
+        <img src="Bilder/f1.jpeg" alt="Fernweh">
+        <div class="overlay"><h3>Fernweh</h3><p>Das Fernweh ist für mich mehr als nur der Wunsch nach neuen Orten – es ist eine Haltung, die mich offen macht für Veränderung.</p></div>
+      </div>
+
+      <div class="projekt-karte">
+        <img src="Bilder/i2.jpeg" alt="Licht">
+        <div class="overlay"><h3>Licht & Schatten</h3><p>Das Spiel von Licht und Schatten macht jede Aufnahme einzigartig.</p></div>
+      </div>
+
+      <div class="projekt-karte">
+        <img src="Bilder/n3.JPG" alt="Landschaft">
+        <div class="overlay"><h3>Landschaft</h3><p>Weite Horizonte und kleine Details – die Natur als unerschöpfliche Inspirationsquelle.</p></div>
+      </div>
+
+      <div class="projekt-karte">
+        <img src="Bilder/s1.jpeg" alt="Stimmung">
+        <div class="overlay"><h3>Stimmung</h3><p>Fotografien als Momentaufnahmen von Orten, Menschen und Stimmungen, die mich bewegen.</p></div>
+      </div>
+
+      <div class="projekt-karte">
+        <img src="Bilder/f3.jpeg" alt="Entdeckung">
+        <div class="overlay"><h3>Entdeckung</h3><p>Durch die Kamera lerne ich, genauer hinzuschauen und Details wahrzunehmen.</p></div>
+      </div>
+
+      <div class="projekt-karte">
+        <img src="Bilder/i3.jpeg" alt="Perspektive">
+        <div class="overlay"><h3>Perspektive</h3><p>Neue Blickwinkel entdecken – manchmal liegt die Schönheit im Unerwarteten.</p></div>
+      </div>
+
+      <div class="projekt-karte">
+        <img src="Bilder/n5.JPG" alt="Natur">
+        <div class="overlay"><h3>Stille</h3><p>Ruhige Momente, die laut sprechen – Naturaufnahmen als Ausgleich zum Alltag.</p></div>
+      </div>
+
+      <div class="projekt-karte">
+        <img src="Bilder/s4.jpeg" alt="Reise">
+        <div class="overlay"><h3>Auf Reisen</h3><p>Jedes Bild erzählt ein Stück meiner persönlichen Reise und zeigt, wie ich die Welt wahrnehme.</p></div>
+      </div>
+
+      <div class="projekt-karte">
+        <img src="Bilder/f5.jpeg" alt="Moment">
+        <div class="overlay"><h3>Moment</h3><p>Den perfekten Moment erkennen – instinktiv, ungeplant und ehrlich.</p></div>
+      </div>
+
+      <div class="projekt-karte">
+        <img src="Bilder/n4.JPG" alt="Moment">
+        <div class="overlay"><h3>Moment</h3><p>Den perfekten Moment erkennen – instinktiv, ungeplant und ehrlich.</p></div>
+      </div>
+
+      <div class="projekt-karte">
+        <img src="Bilder/n6.JPG" alt="Moment">
+        <div class="overlay"><h3>Moment</h3><p>Den perfekten Moment erkennen – instinktiv, ungeplant und ehrlich.</p></div>
+      </div>
+
+      <div class="projekt-karte">
+        <img src="Bilder/n7.JPG" alt="Moment">
+        <div class="overlay"><h3>Moment</h3><p>Den perfekten Moment erkennen – instinktiv, ungeplant und ehrlich.</p></div>
+      </div>
+
+      <div class="projekt-karte">
+        <img src="Bilder/i4.jpeg" alt="Moment">
+        <div class="overlay"><h3>Moment</h3><p>Den perfekten Moment erkennen – instinktiv, ungeplant und ehrlich.</p></div>
+      </div>
+
+      <div class="projekt-karte">
+        <img src="Bilder/i5.jpeg" alt="Moment">
+        <div class="overlay"><h3>Moment</h3><p>Den perfekten Moment erkennen – instinktiv, ungeplant und ehrlich.</p></div>
+      </div>
+
+      <div class="projekt-karte">
+        <img src="Bilder/i7.jpg" alt="Moment">
+        <div class="overlay"><h3>Moment</h3><p>Den perfekten Moment erkennen – instinktiv, ungeplant und ehrlich.</p></div>
+      </div>
+
+      <div class="projekt-karte">
+        <img src="Bilder/i6.jpeg" alt="Moment">
+        <div class="overlay"><h3>Moment</h3><p>Den perfekten Moment erkennen – instinktiv, ungeplant und ehrlich.</p></div>
+      </div>
+
+      <div class="projekt-karte">
+        <img src="Bilder/f6.jpeg" alt="Moment">
+        <div class="overlay"><h3>Moment</h3><p>Den perfekten Moment erkennen – instinktiv, ungeplant und ehrlich.</p></div>
+      </div>
+
+      <div class="projekt-karte">
+        <img src="Bilder/f2.jpeg" alt="Moment">
+        <div class="overlay"><h3>Moment</h3><p>Den perfekten Moment erkennen – instinktiv, ungeplant und ehrlich.</p></div>
+      </div>
+
+      <div class="projekt-karte">
+        <img src="Bilder/f7.jpg" alt="Moment">
+        <div class="overlay"><h3>Moment</h3><p>Den perfekten Moment erkennen – instinktiv, ungeplant und ehrlich.</p></div>
+      </div>
+
+      <div class="projekt-karte">
+        <img src="Bilder/f4.jpg" alt="Moment">
+        <div class="overlay"><h3>Moment</h3><p>Den perfekten Moment erkennen – instinktiv, ungeplant und ehrlich.</p></div>
+      </div>
+
+      <div class="projekt-karte">
+        <img src="Bilder/s2.jpeg" alt="Moment">
+        <div class="overlay"><h3>Moment</h3><p>Den perfekten Moment erkennen – instinktiv, ungeplant und ehrlich.</p></div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>Danke fürs vorbei Schauen :)</p>
+    <p>gckirbi@gmail.com</p>
+  </footer>
+
+  <div class="mobile-nav" id="mobile-nav">
+    <button class="mobile-nav-schliessen" id="mobile-nav-schliessen">&times;</button>
+    <a href="index.html">Startseite</a>
+    <a href="ueber-mich.html">Über mich</a>
+    <a href="projekte.html">Projekte</a>
+    <a href="kontakt.html">Kontakt</a>
+  </div>
+  <script>
+    (function(){
+      var hamburger = document.getElementById('hamburger');
+      var mobileNav = document.getElementById('mobile-nav');
+      var schliessen = document.getElementById('mobile-nav-schliessen');
+      function toggle() {
+        hamburger.classList.toggle('offen');
+        mobileNav.classList.toggle('offen');
+        document.body.style.overflow = mobileNav.classList.contains('offen') ? 'hidden' : '';
+      }
+      hamburger.addEventListener('click', toggle);
+      schliessen.addEventListener('click', toggle);
+    })();
+  </script>
+  <script>
+    const lightbox    = document.getElementById('lightbox');
+    const lbBild      = document.getElementById('lb-bild');
+    const lbTitel     = document.getElementById('lb-titel');
+    const lbText      = document.getElementById('lb-beschreibung');
+    const lbInhalt    = document.getElementById('lb-inhalt');
+    const pfeilLinks  = document.getElementById('lb-zurueck');
+    const pfeilRechts = document.getElementById('lb-weiter');
+    let zaehler = 0, kartenBilder = [], bildIndex = 0;
+
+    function pfeileAktualisieren() {
+      pfeilLinks.classList.toggle('sichtbar',  kartenBilder.length > 1 && bildIndex > 0);
+      pfeilRechts.classList.toggle('sichtbar', kartenBilder.length > 1 && bildIndex < kartenBilder.length - 1);
+    }
+
+    document.querySelectorAll('.projekt-karte').forEach(karte => {
+      karte.addEventListener('click', () => {
+        kartenBilder = Array.from(karte.querySelectorAll('img')).map(img => img.src);
+        bildIndex = 0;
+        lbBild.src = kartenBilder[0];
+        lbTitel.textContent = karte.querySelector('h3').textContent;
+        lbText.textContent  = karte.querySelector('p').textContent;
+        pfeileAktualisieren();
+        zaehler++;
+        lbInhalt.classList.toggle('rechts', zaehler % 2 === 0);
+        lightbox.classList.add('aktiv');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    pfeilLinks.addEventListener('click', e => { e.stopPropagation(); if (bildIndex > 0) { bildIndex--; lbBild.src = kartenBilder[bildIndex]; pfeileAktualisieren(); } });
+    pfeilRechts.addEventListener('click', e => { e.stopPropagation(); if (bildIndex < kartenBilder.length - 1) { bildIndex++; lbBild.src = kartenBilder[bildIndex]; pfeileAktualisieren(); } });
+
+    function schliessen() { lightbox.classList.remove('aktiv'); lbBild.src = ''; document.body.style.overflow = ''; }
+    document.getElementById('lb-schliessen').addEventListener('click', schliessen);
+    lightbox.addEventListener('click', e => { if (e.target === lightbox) schliessen(); });
+    document.addEventListener('keydown', e => {
+      if (!lightbox.classList.contains('aktiv')) return;
+      if (e.key === 'ArrowLeft'  && bildIndex > 0)                     { bildIndex--; lbBild.src = kartenBilder[bildIndex]; pfeileAktualisieren(); }
+      if (e.key === 'ArrowRight' && bildIndex < kartenBilder.length-1) { bildIndex++; lbBild.src = kartenBilder[bildIndex]; pfeileAktualisieren(); }
+      if (e.key === 'Escape') schliessen();
+    });
+  </script>
+</body>
+</html>
