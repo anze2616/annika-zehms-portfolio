@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Lato:wght@300;400;700&family=Caveat:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Was mich kreativ macht</title>
+  <style>
+    .projekt-karte .overlay h3,
+    .projekt-karte .overlay p { display: none; }
+    .lb-text { display: none; }
+    .lb-inhalt img { max-width: 80vw; }
+    .projekt-karte:hover img { filter: grayscale(0%) brightness(1); }
+  </style>
+</head>
+<body>
+
+  <section class="hero hero--kompakt">
+    <div class="hero-linien" aria-hidden="true">
+      <div class="hero-linie-v"></div>
+      <div class="hero-linie-v"></div>
+      <div class="hero-linie-v"></div>
+      <div class="hero-linie-v"></div>
+      <div class="hero-linie-v"></div>
+      <div class="hero-linie-v"></div>
+    </div>
+    <div class="hero-topbar">
+      <span class="hero-libre">LIBRE</span>
+      <a href="kontakt.html" class="hero-kontakt-link">Kontakt</a>
+      <button class="hamburger" id="hamburger" aria-label="Menü öffnen">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="hero-body">
+      <div class="hero-mitte">
+        <div class="hero-portfolio-block">
+          <p class="hero-portfolio hero-portfolio-1">PORTFOLIO</p>
+          <p class="hero-portfolio hero-portfolio-2">PORTFOLIO</p>
+        </div>
+        <div class="hero-untere-reihe">
+          <nav class="hero-nav">
+            <ul>
+              <li><a href="index.html">Startseite</a></li>
+              <li><a href="ueber-mich.html">Über mich</a></li>
+              <li><a href="projekte.html">Projekte</a></li>
+              <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+          </nav>
+          <p class="hero-vorname">ANNI</p>
+        </div>
+      </div>
+      <div class="hero-seite-rechts">
+        <span class="hero-vertikal-name">ANNI ZEHMS</span>
+        <div class="hero-linie-rechts"></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-schliessen" id="lb-schliessen">&times;</button>
+    <div class="lb-inhalt" id="lb-inhalt">
+      <div class="lb-bild-wrapper">
+        <button class="lb-pfeil lb-pfeil-links" id="lb-zurueck">&#8249;</button>
+        <img src="" id="lb-bild" alt="">
+        <button class="lb-pfeil lb-pfeil-rechts" id="lb-weiter">&#8250;</button>
+      </div>
+      <div class="lb-text">
+        <h3 id="lb-titel"></h3>
+        <p id="lb-beschreibung"></p>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <div class="pinterest-grid">
+
+      <div class="projekt-karte">
+        <img src="Bilder/malen.typ.jpeg" alt="Portrait">
+        <div class="overlay"><h3>Portrait</h3><p>In der Corona-Zeit habe ich meine Liebe zum Zeichnen wiederentdeckt. Besonders fasziniert mich die menschliche Form in all ihren Ausdrucksweisen.</p></div>
+      </div>
+
+      <div class="projekt-karte">
+        <img src="Bilder/malen.frau.jpg" alt="Figur">
+        <div class="overlay"><h3>Figur</h3><p>Körper in Bewegung und Ruhe – die Reduktion auf Bleistiftlinien bringt eine besondere Konzentration auf das Wesentliche.</p></div>
+      </div>
+
+      <div class="projekt-karte">
+        <img src="Bilder/malen.auge.jpg" alt="Auge">
+        <div class="overlay"><h3>Auge</h3><p>Detailstudien in Bleistift. Feine Linien und Schatten, die Emotionen und Persönlichkeit sichtbar machen.</p></div>
+      </div>
+
+      <div class="projekt-karte">
+        <img src="Bilder/malen.aqua.JPG" alt="Aquarell">
+        <div class="overlay"><h3>Aquarell</h3><p>Fließend, lebendig und oft unkontrollierbar – die Unvorhersehbarkeit von Aquarell bringt eine eigene Magie mit sich.</p></div>
+      </div>
+
+      <div class="projekt-karte">
+        <img src="Bilder/malen.augen.jpg" alt="Augen">
+        <div class="overlay"><h3>Augen</h3><p>Ausdrucksstarke Augendetails – der Spiegel der Seele in Bleistift eingefangen.</p></div>
+      </div>
+
+      <div class="projekt-karte">
+        <img src="Bilder/malen.malen.jpg" alt="Skizze">
+        <div class="overlay"><h3>Skizze</h3><p>Freie Handzeichnungen als spontaner Ausdruck – ohne Plan, nur mit Stift und Gefühl.</p></div>
+      </div>
+
+      <div class="projekt-karte">
+        <img src="Bilder/malen.supreme.jpg" alt="Illustration">
+        <div class="overlay"><h3>Illustration</h3><p>Stilisierte Grafik zwischen Kunst und Design – Pop-Kultur trifft auf persönlichen Stil.</p></div>
+      </div>
+
+      <div class="projekt-karte">
+        <img src="Bilder/Kreativitaet.jpg" alt="Illustration">
+        <div class="overlay"><h3>Illustration</h3><p>Stilisierte Grafik zwischen Kunst und Design – Pop-Kultur trifft auf persönlichen Stil.</p></div>
+      </div>
+
+      <div class="projekt-karte">
+        <img src="Bilder/IMG_1641.jpeg" alt="Illustration">
+        <div class="overlay"><h3>Illustration</h3><p>Stilisierte Grafik zwischen Kunst und Design – Pop-Kultur trifft auf persönlichen Stil.</p></div>
+      </div>
+
+
+    </div>
+  </main>
+
+  <footer>
+    <p>Danke fürs vorbei Schauen :)</p>
+    <p>gckirbi@gmail.com</p>
+  </footer>
+
+  <div class="mobile-nav" id="mobile-nav">
+    <button class="mobile-nav-schliessen" id="mobile-nav-schliessen">&times;</button>
+    <a href="index.html">Startseite</a>
+    <a href="ueber-mich.html">Über mich</a>
+    <a href="projekte.html">Projekte</a>
+    <a href="kontakt.html">Kontakt</a>
+  </div>
+  <script>
+    (function(){
+      var hamburger = document.getElementById('hamburger');
+      var mobileNav = document.getElementById('mobile-nav');
+      var schliessen = document.getElementById('mobile-nav-schliessen');
+      function toggle() {
+        hamburger.classList.toggle('offen');
+        mobileNav.classList.toggle('offen');
+        document.body.style.overflow = mobileNav.classList.contains('offen') ? 'hidden' : '';
+      }
+      hamburger.addEventListener('click', toggle);
+      schliessen.addEventListener('click', toggle);
+    })();
+  </script>
+  <script>
+    const lightbox    = document.getElementById('lightbox');
+    const lbBild      = document.getElementById('lb-bild');
+    const lbTitel     = document.getElementById('lb-titel');
+    const lbText      = document.getElementById('lb-beschreibung');
+    const lbInhalt    = document.getElementById('lb-inhalt');
+    const pfeilLinks  = document.getElementById('lb-zurueck');
+    const pfeilRechts = document.getElementById('lb-weiter');
+    let zaehler = 0, kartenBilder = [], bildIndex = 0;
+
+    function pfeileAktualisieren() {
+      pfeilLinks.classList.toggle('sichtbar',  kartenBilder.length > 1 && bildIndex > 0);
+      pfeilRechts.classList.toggle('sichtbar', kartenBilder.length > 1 && bildIndex < kartenBilder.length - 1);
+    }
+
+    document.querySelectorAll('.projekt-karte').forEach(karte => {
+      karte.addEventListener('click', () => {
+        kartenBilder = Array.from(karte.querySelectorAll('img')).map(img => img.src);
+        bildIndex = 0;
+        lbBild.src = kartenBilder[0];
+        lbTitel.textContent = karte.querySelector('h3').textContent;
+        lbText.textContent  = karte.querySelector('p').textContent;
+        pfeileAktualisieren();
+        zaehler++;
+        lbInhalt.classList.toggle('rechts', zaehler % 2 === 0);
+        lightbox.classList.add('aktiv');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    pfeilLinks.addEventListener('click', e => { e.stopPropagation(); if (bildIndex > 0) { bildIndex--; lbBild.src = kartenBilder[bildIndex]; pfeileAktualisieren(); } });
+    pfeilRechts.addEventListener('click', e => { e.stopPropagation(); if (bildIndex < kartenBilder.length - 1) { bildIndex++; lbBild.src = kartenBilder[bildIndex]; pfeileAktualisieren(); } });
+
+    function schliessen() { lightbox.classList.remove('aktiv'); lbBild.src = ''; document.body.style.overflow = ''; }
+    document.getElementById('lb-schliessen').addEventListener('click', schliessen);
+    lightbox.addEventListener('click', e => { if (e.target === lightbox) schliessen(); });
+    document.addEventListener('keydown', e => {
+      if (!lightbox.classList.contains('aktiv')) return;
+      if (e.key === 'ArrowLeft'  && bildIndex > 0)                     { bildIndex--; lbBild.src = kartenBilder[bildIndex]; pfeileAktualisieren(); }
+      if (e.key === 'ArrowRight' && bildIndex < kartenBilder.length-1) { bildIndex++; lbBild.src = kartenBilder[bildIndex]; pfeileAktualisieren(); }
+      if (e.key === 'Escape') schliessen();
+    });
+  </script>
+</body>
+</html>
